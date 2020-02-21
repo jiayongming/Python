@@ -1,2 +1,5 @@
 /no_use
 *.xlsx
+.idea/inspectionProfiles/
+.idea/vcs.xml
+.idea/workspace.xml
