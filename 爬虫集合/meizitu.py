@@ -21,6 +21,7 @@ def get_pic_list(html):
     '''
     soup = BeautifulSoup(html, 'html.parser')
     pic_list = soup.find_all('li', class_='wp-item')
+    print(pic_list)
     for i in pic_list:
         a_tag = i.find('h3', class_='tit').find('a')
         link = a_tag.get('href')
@@ -65,7 +66,7 @@ def main():
                 threads.remove(thread)
         while len(threads) < 5 and len(queue) > 0:   # 最大线程数设置为 5
             cur_page = queue.pop(0)
-            url = 'http://meizitu.com/a/more_{}.html'.format(cur_page)
+            url = 'https://www.meizitu.com/a/more_{}.html'.format(1)
             thread = threading.Thread(target=execute, args=(url,))
             thread.setDaemon(True)
             thread.start()

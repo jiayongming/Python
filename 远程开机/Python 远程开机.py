@@ -1,3 +1,9 @@
+import socket
+import struct
+
+import time
+
+
 def wake_up(request, mac='DC-4A-3E-78-3E-0A'):
     MAC = mac
     BROADCAST = "192.168.0.255"
