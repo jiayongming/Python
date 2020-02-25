@@ -66,7 +66,7 @@ def main():
                 threads.remove(thread)
         while len(threads) < 5 and len(queue) > 0:   # 最大线程数设置为 5
             cur_page = queue.pop(0)
-            url = 'https://www.meizitu.com/a/more_{}.html'.format(1)
+            url = 'https://www.meizitu.com/a/more_{}.html'.format(cur_page)
             thread = threading.Thread(target=execute, args=(url,))
             thread.setDaemon(True)
             thread.start()
